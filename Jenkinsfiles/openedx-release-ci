@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 sh '''source openedx_release_venv/bin/activate
-                    tag_release --doit -R --branch open-release/${OPENEDX_RELEASE_NAME} -y --username ${GITHUB_CREDS_USR} --token ${GITHUB_CREDS_PSW}'''
+                    tag_release --doit -R --branch open-release/${OPENEDX_RELEASE_NAME} -y -q --username ${GITHUB_CREDS_USR} --token ${GITHUB_CREDS_PSW}'''
             }
         }
     }
